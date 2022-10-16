@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: black;
+			overflow: none;
+		}
+		.stars{
+			background: black url(stars.png) repeat top center;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: -2;
+		}
+		.twinkling{
+			background: transparent url(twinkling.png) repeat top center;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: -1;
+			animation-name: move-stars;
+			animation-duration: 200s;
+			animation-iteration-count: infinite;
+		}
+		@keyframes move-stars {
+			0%{
+				background-position: 0 0;
+			}
+			100%{
+				background-position: -10000px 5000px;
+			}
+		}
+		.system{
+			width: 700px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			zoom: O.7;
+		}
+		.orbita{
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			border: 1px white solid;
+			border-radius: 100%;
+			position: absolute;
+		}
+		.sun{
+			animation: pulsation 2s ease-in infinite;
+		}
+		.earth{
+			height: 350px;
+			width: 350px;
+			animation: spin 8s linear infinite;
+		}
+		.earth-img{
+			position: absolute;
+			left: -12px;
+		}
+		.mars{
+			height: 470px;
+			width: 470px;
+			animation: spin 10s linear infinite; 
+		}
+		.mars-img{
+			height: 20px;
+			width: 20px;
+			position: absolute;
+			left: -10px;
+		}
+		.jupiter{
+			height: 680px;
+			width: 680px;
+			animation: spin 15s linear infinite; 
+		}
+		.jupiter-img{
+			height: 44px;
+			width: 44px;
+			position: absolute;
+			left: -22px;
+		}
+		.saturn{
+			height: 850px;
+			width: 850px;
+			animation: spin 20s linear infinite; 
+		}
+		.saturn-img{
+			height: 36px;
+			width: 36px;
+			position: absolute;
+			left: -18px;
+		}
+		.uranus{
+			height: 1250px;
+			width: 1250px;
+			animation: spin 25s linear infinite; 
+		}
+		.uranus-img{
+			height: 28px;
+			width: 28px;
+			position: absolute;
+			left: -14px;
+		}
+		.neptune{
+			height: 1550px;
+			width: 1550px;
+			animation: spin 38s linear infinite; 
+		}
+		.neptune-img{
+			height: 30px;
+			width: 30px;
+			position: absolute;
+			left: -15px;
+		}
+		.pluto{
+			height: 2150px;
+			width: 2150px;
+			animation: spin 56s linear infinite; 
+		}
+		.pluto-img{
+			height: 18px;
+			width: 18px;
+			position: absolute;
+			left: -9px;
+		}
+		@keyframes spin {
+			0%{
+				transform: rotate(0deg);
+			}
+			0%{
+				transform: rotate(360deg);
+			}
+		}
+		@keyframes pulsation {
+			0%{
+				transform: scale(1.0);
+			}
+			33%{
+				transform: scale(1..05);
+			}
+			66%{
+				transform: scale(1.03);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="stars"></div>
+	<div class="twinkling"></div>
+	<div class="system">
+		<div class="sun">
+			<img src="https://www.dropbox.com/s/g02pto204mz1ywi/sun.png?raw=1" alt="">
+		</div>
+		<div class="earth orbita">
+			<img src="https://www.dropbox.com/s/ropzlyhb1v19l5t/earth.png?raw=1 " alt="" 
+			class="earth-img">
+		</div>
+		<div class="mars orbita">
+			<img src="mars.png" alt="" class="mars-img">
+		</div>
+		<div class="jupiter orbita">
+			<img src="https://www.dropbox.com/s/d28oxi2c74zcoqk/jupiter.png?raw=1" alt="" class="jupiter-img">
+		</div>
+		<div class="saturn orbita">
+			<img src="https://www.dropbox.com/s/h8pj72v6mmaa0yq/saturn.png?raw=1" alt="" class="saturn-img">
+		</div>
+		<div class="uranus orbita">
+			<img src="https://www.dropbox.com/s/du6znsmfos2r4ry/uranus.png?raw=1" alt="" class="uranus-img">
+		</div>
+		<div class="neptune orbita">
+			<img src="https://www.dropbox.com/s/170sr7xl6gxpona/neptune.png?raw=1" alt="" class="neptune-img">
+		</div>
+		<div class="pluto orbita">
+			<img src="https://www.dropbox.com/s/z7axkafhs887t9b/pluto.png?raw=1 " alt="" class="pluto-img">
+		</div>
+	</div>
+</body>
+</html>
